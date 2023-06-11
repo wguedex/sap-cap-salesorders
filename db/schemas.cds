@@ -11,7 +11,7 @@ entity Header : cuid {
     FirstName    : String(30);
     LastName     : String(30);
     Country      : Country;
-    DelivaryDate : Date;
+    DeliveryDate : Date;
     OrderStatus  : Integer;
     ImageURL     : String;
     SalesOrder   : Association to SalesOrder;
