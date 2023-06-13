@@ -6,7 +6,7 @@ using {
     Country
 } from '@sap/cds/common';
 
-entity Header : cuid { 
+entity Header : cuid {
     Email        : String(30);
     FirstName    : String(30);
     LastName     : String(30);
@@ -14,7 +14,7 @@ entity Header : cuid {
     DeliveryDate : Date;
     OrderStatus  : Integer;
     ImageURL     : String;
-    SalesOrder   : Association to SalesOrder;
+    SalesOrder   : Association to SalesOrder; 
 }
 
 entity Items : cuid {
@@ -26,7 +26,7 @@ entity Items : cuid {
     Height           : Decimal(15, 3);
     Width            : Decimal(15, 3);
     Depth            : Decimal(15, 3);
-    Quantity         : Decimal(16, 2);  
+    Quantity         : Decimal(16, 2);
     SalesOrder       : Association to SalesOrder;
 }
 
