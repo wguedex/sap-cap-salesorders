@@ -16,6 +16,13 @@
     "start": "cds-serve"
   },
   "cds": {
-    "requires": {  }
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db/salesorder.db"
+        }
+      }
+    }
   }
 }

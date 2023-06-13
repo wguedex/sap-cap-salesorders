@@ -8,6 +8,7 @@ CREATE TABLE com_so_Header (
   DeliveryDate DATE_TEXT,
   OrderStatus INTEGER,
   ImageURL NVARCHAR(5000),
+  SalesOrder_ID NVARCHAR(36),
   PRIMARY KEY(ID)
 );
 
@@ -65,7 +66,8 @@ CREATE VIEW localized_com_so_Header AS SELECT
   L.Country_code,
   L.DeliveryDate,
   L.OrderStatus,
-  L.ImageURL
+  L.ImageURL,
+  L.SalesOrder_ID
 FROM com_so_Header AS L;
 
 CREATE VIEW localized_com_so_SalesOrder AS SELECT
@@ -111,7 +113,8 @@ CREATE VIEW localized_de_com_so_Header AS SELECT
   L.Country_code,
   L.DeliveryDate,
   L.OrderStatus,
-  L.ImageURL
+  L.ImageURL,
+  L.SalesOrder_ID
 FROM com_so_Header AS L;
 
 CREATE VIEW localized_fr_com_so_Header AS SELECT
@@ -122,7 +125,8 @@ CREATE VIEW localized_fr_com_so_Header AS SELECT
   L.Country_code,
   L.DeliveryDate,
   L.OrderStatus,
-  L.ImageURL
+  L.ImageURL,
+  L.SalesOrder_ID
 FROM com_so_Header AS L;
 
 CREATE VIEW localized_de_com_so_SalesOrder AS SELECT
